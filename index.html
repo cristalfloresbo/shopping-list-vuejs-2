@@ -8,7 +8,9 @@
     <body>
         <div id="shopping-list">
             <h1>{{ header.toLocaleUpperCase() }}</h1>
-            <input v-model="header">
+            <ul>
+                <li v-for="item in items">{{ item }}</li>
+            </ul>
         </div>
 
         <script src="https://unpkg.com/vue@2"></script>
@@ -17,6 +19,11 @@
                 el: '#shopping-list',
                 data: {
                     header: 'shopping list app',
+                    items: [
+                        '10 party hats',
+                        '2 board games',
+                        '20 cups',
+                    ]
                 }
             })
         </script>
